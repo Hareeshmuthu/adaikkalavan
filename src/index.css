@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -53,11 +52,11 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-lavender to-lavender-light bg-clip-text text-transparent;
   }
   
   .btn-gradient {
-    @apply bg-gradient-to-r from-gold to-gold-light hover:from-gold-light hover:to-gold text-black font-medium;
+    @apply bg-gradient-to-r from-lavender to-lavender-light hover:from-lavender-light hover:to-lavender text-black font-medium;
   }
   
   .section-padding {

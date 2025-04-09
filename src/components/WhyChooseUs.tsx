@@ -1,30 +1,29 @@
-
 import React from 'react';
 import { CheckCircle, Award, Clock, Shield, Users } from 'lucide-react';
 
 const features = [
   {
-    icon: <CheckCircle className="h-8 w-8 text-gold" />,
+    icon: <CheckCircle className="h-8 w-8 text-lavender" />,
     title: "Registered Valuers",
     description: "IBBI, Income Tax, and Government Approved valuers providing credible assessments."
   },
   {
-    icon: <Users className="h-8 w-8 text-gold" />,
+    icon: <Users className="h-8 w-8 text-lavender" />,
     title: "Education & Mentorship",
     description: "Teaching and educating budding valuers as faculty associated with IOV."
   },
   {
-    icon: <Award className="h-8 w-8 text-gold" />,
+    icon: <Award className="h-8 w-8 text-lavender" />,
     title: "Strong Experience",
     description: "Extensive experience with PSU & private banks for over 25 years."
   },
   {
-    icon: <Clock className="h-8 w-8 text-gold" />,
+    icon: <Clock className="h-8 w-8 text-lavender" />,
     title: "Compliance",
     description: "Strict adherence to ICAI & Valuation Standards for all reports."
   },
   {
-    icon: <Shield className="h-8 w-8 text-gold" />,
+    icon: <Shield className="h-8 w-8 text-lavender" />,
     title: "Secure Data Handling",
     description: "Confidential and secure handling of all client information."
   }
@@ -36,7 +35,7 @@ const WhyChooseUs = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Why Choose Us</h2>
-          <div className="w-20 h-1 bg-gold mx-auto mb-4"></div>
+          <div className="w-20 h-1 bg-lavender mx-auto mb-4"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             With 25 years of experience in property valuation, we deliver accurate, 
             compliant, and professional services for all your valuation needs.

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -11,10 +10,10 @@ const NavBar = () => {
           M. Adaikkalavan
         </div>
         <div className="hidden md:flex items-center space-x-6">
-          <a href="#services" className="text-sm hover:text-gold transition-colors">Services</a>
-          <a href="#why-choose-us" className="text-sm hover:text-gold transition-colors">Why Choose Us</a>
-          <a href="#clients" className="text-sm hover:text-gold transition-colors">Clients</a>
-          <a href="#contact" className="text-sm hover:text-gold transition-colors">Contact</a>
+          <a href="#services" className="text-sm hover:text-lavender transition-colors">Services</a>
+          <a href="#why-choose-us" className="text-sm hover:text-lavender transition-colors">Why Choose Us</a>
+          <a href="#clients" className="text-sm hover:text-lavender transition-colors">Clients</a>
+          <a href="#contact" className="text-sm hover:text-lavender transition-colors">Contact</a>
         </div>
         <Button variant="outline" className="hidden md:flex items-center gap-2">
           <Phone size={16} />

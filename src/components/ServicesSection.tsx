@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const services = [
   {
-    icon: <Building className="h-10 w-10 text-gold" />,
+    icon: <Building className="h-10 w-10 text-lavender" />,
     title: "Valuations for Banks (Loan)",
     description: "Comprehensive property valuations for all major banks to facilitate loan processing with accurate market assessments."
   },
@@ -37,7 +37,7 @@ const ServicesSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Services</h2>
-          <div className="w-20 h-1 bg-gold mx-auto"></div>
+          <div className="w-20 h-1 bg-lavender mx-auto"></div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -61,3 +61,4 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+

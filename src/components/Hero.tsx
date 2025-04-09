@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { FileText, Phone } from 'lucide-react';
@@ -19,10 +18,9 @@ const Hero = () => {
         }}
       />
       
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="mb-6 opacity-0 animate-fadeIn">
-          <h4 className="font-medium text-gold mb-2">
+          <h4 className="font-medium text-lavender mb-2">
             M.Adaikkalavan M.E.(struc),M.Sc.,(REV),A.M.I.E,F.I.V,F.I.I.T.Arb.
           </h4>
           <h6 className="text-muted-foreground">
