@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { FileText, Phone } from 'lucide-react';
@@ -48,7 +49,7 @@ const Hero = () => {
           <Button 
             variant="outline" 
             size="lg" 
-            className="gap-2 border-gold hover:bg-gold/10"
+            className="gap-2 border-lavender hover:bg-lavender/10"
           >
             <Phone size={18} />
             <a href="tel:9361179820">Talk to an Expert</a>
@@ -58,8 +59,8 @@ const Hero = () => {
       
       {/* Scroll indicator */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-8 h-12 rounded-full border-2 border-gold flex items-start justify-center">
-          <div className="w-1 h-3 bg-gold rounded-full mt-2 animate-slideUp"></div>
+        <div className="w-8 h-12 rounded-full border-2 border-lavender flex items-start justify-center">
+          <div className="w-1 h-3 bg-lavender rounded-full mt-2 animate-slideUp"></div>
         </div>
       </div>
     </section>

@@ -10,22 +10,22 @@ const services = [
     description: "Comprehensive property valuations for all major banks to facilitate loan processing with accurate market assessments."
   },
   {
-    icon: <Scale className="h-10 w-10 text-gold" />,
+    icon: <Scale className="h-10 w-10 text-lavender" />,
     title: "Valuation for Insolvency (IBBI)",
     description: "Expert valuations following IBBI guidelines for bankruptcy proceedings and insolvency resolution processes."
   },
   {
-    icon: <FileText className="h-10 w-10 text-gold" />,
+    icon: <FileText className="h-10 w-10 text-lavender" />,
     title: "Company Law Valuation",
     description: "Specialized valuations under Companies Act, 2013 for mergers, acquisitions, and corporate restructuring."
   },
   {
-    icon: <Home className="h-10 w-10 text-gold" />,
+    icon: <Home className="h-10 w-10 text-lavender" />,
     title: "Real Estate/Industrial Asset Valuation",
     description: "Detailed valuation of residential, commercial properties and industrial assets with market analysis."
   },
   {
-    icon: <BarChart className="h-10 w-10 text-gold" />,
+    icon: <BarChart className="h-10 w-10 text-lavender" />,
     title: "Fair Market Value, Liquidation Value Reports",
     description: "Comprehensive reports assessing fair market value and liquidation value with detailed analytics."
   }
@@ -42,7 +42,7 @@ const ServicesSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="glass-card hover:border-gold/50 transition-all duration-300 h-full">
+            <Card key={index} className="glass-card hover:border-lavender/50 transition-all duration-300 h-full">
               <CardHeader>
                 <div className="mb-4">{service.icon}</div>
                 <CardTitle className="text-xl">{service.title}</CardTitle>
@@ -61,4 +61,3 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
-

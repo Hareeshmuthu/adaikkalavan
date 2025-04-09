@@ -74,7 +74,7 @@ const ContactForm = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Request a Valuation</h2>
-          <div className="w-20 h-1 bg-gold mx-auto mb-4"></div>
+          <div className="w-20 h-1 bg-lavender mx-auto mb-4"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Get your property valuation started in 24 hours. Fill the form below or contact us directly.
           </p>
@@ -187,11 +187,11 @@ const ContactForm = () => {
             <div className="space-y-6 mb-8">
               <div>
                 <div className="flex items-center gap-3 mb-2">
-                  <Phone size={18} className="text-gold" />
+                  <Phone size={18} className="text-lavender" />
                   <h4 className="font-medium">Phone</h4>
                 </div>
                 <p className="text-muted-foreground pl-7">
-                  <a href="tel:9361179820" className="hover:text-gold">
+                  <a href="tel:9361179820" className="hover:text-lavender">
                     +91 93611 79820
                   </a>
                 </p>
@@ -199,11 +199,11 @@ const ContactForm = () => {
               
               <div>
                 <div className="flex items-center gap-3 mb-2">
-                  <Mail size={18} className="text-gold" />
+                  <Mail size={18} className="text-lavender" />
                   <h4 className="font-medium">Email</h4>
                 </div>
                 <p className="text-muted-foreground pl-7 break-all">
-                  <a href="mailto:adaikkalavanvaluer@gmail.com" className="hover:text-gold">
+                  <a href="mailto:adaikkalavanvaluer@gmail.com" className="hover:text-lavender">
                     adaikkalavanvaluer@gmail.com
                   </a>
                 </p>

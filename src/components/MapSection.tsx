@@ -2,6 +2,14 @@
 import React, { useEffect, useRef } from 'react';
 import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
 
+// Add Window interface augmentation
+declare global {
+  interface Window {
+    initMap?: () => void;
+    google?: any;
+  }
+}
+
 const MapSection = () => {
   const mapRef = useRef<HTMLDivElement>(null);
 
@@ -9,7 +17,7 @@ const MapSection = () => {
     // Define the initMap function that will be called as a callback
     window.initMap = () => {
       // Create map only if the ref is available
-      if (mapRef.current) {
+      if (mapRef.current && window.google) {
         const coordinates = { lat: 10.994167, lng: 76.93889 };
         const mapOptions: google.maps.MapOptions = {
           center: coordinates,
@@ -139,7 +147,7 @@ const MapSection = () => {
     // Cleanup function
     return () => {
       // Remove the global initMap function when component unmounts
-      window.initMap = () => {};
+      window.initMap = undefined;
     };
   }, []);
 
@@ -148,13 +156,13 @@ const MapSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Office</h2>
-          <div className="w-20 h-1 bg-gold mx-auto"></div>
+          <div className="w-20 h-1 bg-lavender mx-auto"></div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="glass-card p-6 rounded-xl">
             <h3 className="text-xl font-medium mb-4 flex items-center gap-2">
-              <MapPin size={20} className="text-gold" /> 
+              <MapPin size={20} className="text-lavender" /> 
               Office Location
             </h3>
             <p className="text-muted-foreground mb-6">
@@ -165,12 +173,12 @@ const MapSection = () => {
             
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <Phone size={18} className="text-gold" />
-                <a href="tel:9361179820" className="hover:text-gold">9361179820</a>
+                <Phone size={18} className="text-lavender" />
+                <a href="tel:9361179820" className="hover:text-lavender">9361179820</a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail size={18} className="text-gold" />
-                <a href="mailto:adaikkalavanvaluer@gmail.com" className="hover:text-gold">
+                <Mail size={18} className="text-lavender" />
+                <a href="mailto:adaikkalavanvaluer@gmail.com" className="hover:text-lavender">
                   adaikkalavanvaluer@gmail.com
                 </a>
               </div>
@@ -180,7 +188,7 @@ const MapSection = () => {
               href="https://www.google.com/maps/dir/?api=1&destination=10.994167,76.93889" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="mt-6 flex items-center gap-2 text-gold hover:underline"
+              className="mt-6 flex items-center gap-2 text-lavender hover:underline"
             >
               <Navigation size={16} />
               Get Directions

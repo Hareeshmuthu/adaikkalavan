@@ -20,27 +20,27 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-gold transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-lavender transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-muted-foreground hover:text-gold transition-colors">
+                <a href="#services" className="text-muted-foreground hover:text-lavender transition-colors">
                   Services
                 </a>
               </li>
               <li>
-                <a href="#why-choose-us" className="text-muted-foreground hover:text-gold transition-colors">
+                <a href="#why-choose-us" className="text-muted-foreground hover:text-lavender transition-colors">
                   Why Choose Us
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-muted-foreground hover:text-gold transition-colors">
+                <a href="#contact" className="text-muted-foreground hover:text-lavender transition-colors">
                   Contact
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-gold transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-lavender transition-colors">
                   Terms
                 </a>
               </li>
@@ -51,7 +51,7 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Contact Details</h3>
             <ul className="space-y-4 text-muted-foreground">
               <li className="flex gap-3">
-                <MapPin size={18} className="text-gold shrink-0 mt-1" />
+                <MapPin size={18} className="text-lavender shrink-0 mt-1" />
                 <span>
                   201, Sri Vasavi Complex,<br />
                   1248, Big Bazaar Street,<br />
@@ -59,14 +59,14 @@ const Footer = () => {
                 </span>
               </li>
               <li className="flex gap-3 items-center">
-                <Phone size={18} className="text-gold shrink-0" />
-                <a href="tel:9361179820" className="hover:text-gold">
+                <Phone size={18} className="text-lavender shrink-0" />
+                <a href="tel:9361179820" className="hover:text-lavender">
                   +91 93611 79820
                 </a>
               </li>
               <li className="flex gap-3 items-center">
-                <Mail size={18} className="text-gold shrink-0" />
-                <a href="mailto:adaikkalavanvaluer@gmail.com" className="hover:text-gold break-all">
+                <Mail size={18} className="text-lavender shrink-0" />
+                <a href="mailto:adaikkalavanvaluer@gmail.com" className="hover:text-lavender break-all">
                   adaikkalavanvaluer@gmail.com
                 </a>
               </li>
@@ -80,7 +80,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/adaikkalavan-m-6b00878a" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full bg-secondary/70 flex items-center justify-center hover:bg-gold transition-colors"
+                className="h-10 w-10 rounded-full bg-secondary/70 flex items-center justify-center hover:bg-lavender transition-colors"
               >
                 <Linkedin size={18} />
               </a>
@@ -88,7 +88,7 @@ const Footer = () => {
                 href="https://www.instagram.com/adaikkalavan_valuer" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full bg-secondary/70 flex items-center justify-center hover:bg-gold transition-colors"
+                className="h-10 w-10 rounded-full bg-secondary/70 flex items-center justify-center hover:bg-lavender transition-colors"
               >
                 <Instagram size={18} />
               </a>
