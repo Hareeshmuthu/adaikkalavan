@@ -6,12 +6,12 @@ const MapSection = () => {
   const mapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Initialize map when the component mounts
-    const initMap = () => {
+    // Define the initMap function that will be called as a callback
+    window.initMap = () => {
       // Create map only if the ref is available
       if (mapRef.current) {
         const coordinates = { lat: 10.994167, lng: 76.93889 };
-        const mapOptions = {
+        const mapOptions: google.maps.MapOptions = {
           center: coordinates,
           zoom: 15,
           styles: [
@@ -130,11 +130,17 @@ const MapSection = () => {
       script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCT_FS0An9L96Q_lyg-4usGDOsBvcI6eQU&callback=initMap`;
       script.async = true;
       script.defer = true;
-      window.initMap = initMap;
       document.head.appendChild(script);
     } else {
-      initMap();
+      // If Google Maps is already loaded, call initMap directly
+      window.initMap();
     }
+
+    // Cleanup function
+    return () => {
+      // Remove the global initMap function when component unmounts
+      window.initMap = () => {};
+    };
   }, []);
 
   return (
