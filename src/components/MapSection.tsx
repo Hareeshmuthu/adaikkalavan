@@ -1,14 +1,8 @@
-
 import React, { useEffect, useRef } from 'react';
 import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
 
-// Add Window interface augmentation
-declare global {
-  interface Window {
-    initMap?: () => void;
-    google?: any;
-  }
-}
+// We'll remove the global declaration here since it's already defined in vite-env.d.ts
+// and that's causing the conflict
 
 const MapSection = () => {
   const mapRef = useRef<HTMLDivElement>(null);
