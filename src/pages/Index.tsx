@@ -13,7 +13,7 @@ import { Phone } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <NavBar />
       <Hero />
       <ServicesSection />
@@ -23,10 +23,10 @@ const Index = () => {
       <ContactForm />
       <Footer />
       
-      {/* Sticky Call-to-Action */}
-      <div className="fixed bottom-4 right-4 z-50">
+      {/* Sticky Call-to-Action with animation */}
+      <div className="fixed bottom-4 right-4 z-50 animate-bounce">
         <a href="tel:9361179820">
-          <Button className="btn-gradient rounded-full h-14 w-14 p-0">
+          <Button className="btn-gradient rounded-full h-14 w-14 p-0 hover:scale-110 transition-transform">
             <Phone size={24} />
           </Button>
         </a>

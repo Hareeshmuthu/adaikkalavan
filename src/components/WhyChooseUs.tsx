@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { CheckCircle, Award, Clock, Shield, Users } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const features = [
   {
@@ -30,10 +32,12 @@ const features = [
 ];
 
 const WhyChooseUs = () => {
+  const sectionRef = useScrollAnimation();
+
   return (
     <section id="why-choose-us" className="section-padding">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
+      <div className="container mx-auto" ref={sectionRef}>
+        <div className="text-center mb-12 opacity-0 -translate-y-4 transition-all duration-700 animate-in">
           <h2 className="text-3xl font-bold mb-4">Why Choose Us</h2>
           <div className="w-20 h-1 bg-lavender mx-auto mb-4"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -46,7 +50,10 @@ const WhyChooseUs = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="flex gap-4 p-6 glass-card rounded-xl"
+              className={`flex gap-4 p-6 glass-card rounded-xl opacity-0 animate-in ${
+                index % 2 === 0 ? '-translate-x-4' : 'translate-x-4'
+              }`}
+              style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="mt-1 shrink-0">
                 {feature.icon}

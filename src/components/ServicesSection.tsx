@@ -2,6 +2,7 @@
 import React from 'react';
 import { Building, Scale, FileText, Home, BarChart } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const services = [
   {
@@ -32,17 +33,25 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const sectionRef = useScrollAnimation();
+
   return (
     <section id="services" className="section-padding bg-secondary/30">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
+      <div className="container mx-auto" ref={sectionRef}>
+        <div className="text-center mb-12 opacity-0 -translate-y-4 transition-all duration-700 animate-in">
           <h2 className="text-3xl font-bold mb-4">Our Services</h2>
           <div className="w-20 h-1 bg-lavender mx-auto"></div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="glass-card hover:border-lavender/50 transition-all duration-300 h-full">
+            <Card 
+              key={index} 
+              className={`glass-card hover:border-lavender/50 transition-all duration-500 h-full opacity-0 animate-in ${
+                index % 2 === 0 ? '-translate-x-4' : 'translate-x-4'
+              }`}
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
               <CardHeader>
                 <div className="mb-4">{service.icon}</div>
                 <CardTitle className="text-xl">{service.title}</CardTitle>
