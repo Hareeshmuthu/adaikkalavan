@@ -1,16 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
 
-// We'll remove the global declaration here since it's already defined in vite-env.d.ts
-// and that's causing the conflict
-
 const MapSection = () => {
   const mapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Define the initMap function that will be called as a callback
     window.initMap = () => {
-      // Create map only if the ref is available
       if (mapRef.current && window.google) {
         const coordinates = { lat: 10.994167, lng: 76.93889 };
         const mapOptions: google.maps.MapOptions = {
@@ -98,10 +93,8 @@ const MapSection = () => {
           ],
         };
 
-        // Create map
         const map = new google.maps.Map(mapRef.current, mapOptions);
 
-        // Add marker
         const marker = new google.maps.Marker({
           position: coordinates,
           map: map,
@@ -109,7 +102,6 @@ const MapSection = () => {
           animation: google.maps.Animation.DROP,
         });
 
-        // Add info window
         const infoWindow = new google.maps.InfoWindow({
           content: `
             <div style="color: #333; padding: 5px;">
@@ -125,22 +117,17 @@ const MapSection = () => {
       }
     };
 
-    // Load Google Maps API
     if (!window.google) {
-      // Create script element to load the API
       const script = document.createElement('script');
       script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCT_FS0An9L96Q_lyg-4usGDOsBvcI6eQU&callback=initMap`;
       script.async = true;
       script.defer = true;
       document.head.appendChild(script);
     } else {
-      // If Google Maps is already loaded, call initMap directly
       window.initMap();
     }
 
-    // Cleanup function
     return () => {
-      // Remove the global initMap function when component unmounts
       window.initMap = undefined;
     };
   }, []);
@@ -179,7 +166,7 @@ const MapSection = () => {
             </div>
             
             <a 
-              href="https://www.google.com/maps/dir/?api=1&destination=10.994167,76.93889" 
+              href="https://maps.app.goo.gl/DfbkycScra1m6has6" 
               target="_blank" 
               rel="noopener noreferrer"
               className="mt-6 flex items-center gap-2 text-lavender hover:underline"
