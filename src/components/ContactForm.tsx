@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, Send } from 'lucide-react';
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -33,18 +33,15 @@ const ContactForm = () => {
     e.preventDefault();
     setLoading(true);
 
-    // Simulating form submission
     try {
-      // In a real implementation, send the form data to a backend service
-      // that forwards the email to adaikkalavanvaluer@gmail.com
-      
-      console.log("Form data submitted:", formData);
-      
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { error } = await supabase.functions.invoke('handle-valuation-request', {
+        body: formData
+      });
+
+      if (error) throw error;
       
       toast({
-        title: "Request Submitted",
+        title: "Request Submitted Successfully",
         description: "We'll get back to you within 24 hours.",
       });
       
@@ -58,12 +55,12 @@ const ContactForm = () => {
         message: ''
       });
     } catch (error) {
+      console.error("Submission error:", error);
       toast({
         variant: "destructive",
         title: "Submission Failed",
         description: "Please try again or contact us directly.",
       });
-      console.error("Form submission error:", error);
     } finally {
       setLoading(false);
     }
