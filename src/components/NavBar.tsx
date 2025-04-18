@@ -3,7 +3,6 @@ import React from 'react';
 import { Phone, Menu } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
 import {
   Sheet,
   SheetContent,
@@ -26,7 +25,7 @@ const NavBar = () => {
   ];
 
   // Helper component to handle both regular and scroll links
-  const NavigationLink = ({ link, onNavigate }) => {
+  const NavigationLink = ({ link, onNavigate }: { link: any; onNavigate?: () => void }) => {
     if (link.isRoute) {
       return (
         <Link
@@ -73,7 +72,10 @@ const NavBar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           {navigationLinks.map((link) => (
-            <NavigationLink key={link.label} link={link} />
+            <NavigationLink 
+              key={link.label} 
+              link={link} 
+            />
           ))}
         </div>
         
@@ -107,7 +109,7 @@ const NavBar = () => {
                         onNavigate={() => {
                           const sheet = document.querySelector('[data-state="open"]');
                           if (sheet) {
-                            const closeButton = sheet.querySelector('button[aria-label="Close"]');
+                            const closeButton = sheet.querySelector('button[aria-label="Close"]') as HTMLButtonElement;
                             if (closeButton) {
                               closeButton.click();
                             }
