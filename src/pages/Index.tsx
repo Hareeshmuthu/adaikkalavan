@@ -10,17 +10,31 @@ import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Phone } from 'lucide-react';
+import { Element } from 'react-scroll';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <NavBar />
       <Hero />
-      <ServicesSection />
-      <WhyChooseUs />
-      <ClientsSection />
-      <MapSection />
-      <ContactForm />
+      
+      <Element name="services">
+        <ServicesSection />
+      </Element>
+      
+      <Element name="why-choose-us">
+        <WhyChooseUs />
+      </Element>
+      
+      <Element name="clients">
+        <ClientsSection />
+      </Element>
+      
+      <Element name="contact">
+        <MapSection />
+        <ContactForm />
+      </Element>
+      
       <Footer />
       
       {/* Sticky Call-to-Action with animation */}
