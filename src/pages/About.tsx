@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -6,7 +5,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { CheckCircle, Award, Book, Briefcase, Medal, School, Star, User } from 'lucide-react';
 
-// Animation variants for scrolling elements
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
@@ -306,7 +304,6 @@ const About = () => {
           className="mt-16 text-center"
         >
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-gradient">In Conclusion</h2>
             <p className="text-lg">
               M. Adaikkalavan's <strong>diverse professional experience, extensive knowledge, and continued commitment to the industry and education have established him as a highly respected and sought-after expert in Civil Engineering and Valuation</strong>.
             </p>
