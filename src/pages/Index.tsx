@@ -1,5 +1,5 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Hero from '@/components/Hero';
 import ServicesSection from '@/components/ServicesSection';
@@ -13,24 +13,37 @@ import { Phone } from 'lucide-react';
 import { Element } from 'react-scroll';
 
 const Index = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location.state]);
+
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <NavBar />
       <Hero />
       
-      <Element name="services">
+      <Element name="services" id="services">
         <ServicesSection />
       </Element>
       
-      <Element name="why-choose-us">
+      <Element name="why-choose-us" id="why-choose-us">
         <WhyChooseUs />
       </Element>
       
-      <Element name="clients">
+      <Element name="clients" id="clients">
         <ClientsSection />
       </Element>
       
-      <Element name="contact">
+      <Element name="contact" id="contact">
         <MapSection />
         <ContactForm />
       </Element>

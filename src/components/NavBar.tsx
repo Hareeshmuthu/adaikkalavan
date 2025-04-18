@@ -2,7 +2,7 @@
 import React from 'react';
 import { Phone, Menu } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import {
   Sheet,
@@ -10,10 +10,12 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetClose,
 } from "@/components/ui/sheet";
 
 const NavBar = () => {
   const phoneNumber = "9361179820";
+  const navigate = useNavigate();
   const navigationLinks = [
     { href: "/", label: "Home", isRoute: true },
     { href: "/about", label: "About", isRoute: true },
@@ -24,28 +26,39 @@ const NavBar = () => {
   ];
 
   // Helper component to handle both regular and scroll links
-  const NavigationLink = ({ link }) => {
+  const NavigationLink = ({ link, onNavigate }) => {
     if (link.isRoute) {
       return (
         <Link
           to={link.href}
           className="text-sm hover:text-lavender transition-colors py-2"
+          onClick={onNavigate}
         >
           {link.label}
         </Link>
       );
     } else {
+      const handleClick = () => {
+        // If we're not on the home page, navigate to home first
+        if (window.location.pathname !== '/') {
+          navigate('/', { state: { scrollTo: link.target } });
+        } else {
+          // If we're already on home page, just scroll
+          const element = document.getElementById(link.target);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+        if (onNavigate) onNavigate();
+      };
+
       return (
-        <ScrollLink
-          to={link.target}
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}
+        <div
+          onClick={handleClick}
           className="text-sm hover:text-lavender transition-colors py-2 cursor-pointer"
         >
           {link.label}
-        </ScrollLink>
+        </div>
       );
     }
   };
@@ -85,11 +98,25 @@ const NavBar = () => {
                 <SheetHeader>
                   <SheetTitle>Menu</SheetTitle>
                 </SheetHeader>
-                <div className="flex flex-col gap-4 mt-6">
-                  {navigationLinks.map((link) => (
-                    <NavigationLink key={link.label} link={link} />
-                  ))}
-                </div>
+                <SheetClose asChild>
+                  <div className="flex flex-col gap-4 mt-6">
+                    {navigationLinks.map((link) => (
+                      <NavigationLink 
+                        key={link.label} 
+                        link={link} 
+                        onNavigate={() => {
+                          const sheet = document.querySelector('[data-state="open"]');
+                          if (sheet) {
+                            const closeButton = sheet.querySelector('button[aria-label="Close"]');
+                            if (closeButton) {
+                              closeButton.click();
+                            }
+                          }
+                        }}
+                      />
+                    ))}
+                  </div>
+                </SheetClose>
               </SheetContent>
             </Sheet>
           </div>
