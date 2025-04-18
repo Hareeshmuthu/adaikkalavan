@@ -26,6 +26,19 @@ const About = () => {
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gradient mb-6">About M. Adaikkalavan</h1>
           <div className="w-20 h-1 bg-lavender mx-auto mb-8"></div>
+          
+          {/* Professional Image Section */}
+          <div className="flex justify-center mb-8">
+            <motion.img 
+              src="/lovable-uploads/1dc2530e-a3f6-41ce-9b8a-d016f26be1e5.png" 
+              alt="M. Adaikkalavan speaking at 51st Indian Valuers Congress"
+              className="w-full max-w-2xl rounded-xl shadow-lg"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+            />
+          </div>
+          
           <p className="text-lg md:text-xl max-w-3xl mx-auto">
             <span className="font-semibold">M. Adaikkalavan, born on 26th June 1970, is a highly accomplished professional with over 30 years of extensive experience in the field of Civil Engineering and Valuation</span>.
           </p>
