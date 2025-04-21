@@ -42,7 +42,7 @@ const services = [
   {
     icon: <BarChart className="h-10 w-10 text-lavender" />,
     title: "Valuation for Fractional Ownership",
-    description: "Proportionate share of income, usage, and capital appreciation etc."
+    description: "Proportionate Share of income, Usage, and Capital appreciation etc."
   }
 ];
 
