@@ -167,23 +167,23 @@ const About = () => {
                 <ul className="space-y-3 list-none pl-0">
                   <li className="flex gap-4">
                     <CheckCircle size={20} className="text-lavender flex-shrink-0 mt-1" />
-                    <p>Student training with M/s. Coramandal Engineering, Chennai.</p>
+                    <p>Started from Student trainee with M/s. Coramandal Engineering, Chennai.</p>
                   </li>
                   <li className="flex gap-4">
                     <CheckCircle size={20} className="text-lavender flex-shrink-0 mt-1" />
-                    <p>Serving as a Site Engineer with M/s. Sastha Construction, Coimbatore.</p>
+                    <p>And played role as Site Engineer with M/s. Sastha Construction, Coimbatore.</p>
                   </li>
                   <li className="flex gap-4">
                     <CheckCircle size={20} className="text-lavender flex-shrink-0 mt-1" />
-                    <p>Working with R.S. Developers, Coimbatore.</p>
+                    <p>Then Worked with R.S. Developers, Coimbatore.</p>
                   </li>
                   <li className="flex gap-4">
                     <CheckCircle size={20} className="text-lavender flex-shrink-0 mt-1" />
-                    <p>Practicing as a Self-employed Consulting Civil Engineer since January 1995.</p>
+                    <p>Subsequently Practicing as a Self-employed Consulting Civil Engineer since January 1995.</p>
                   </li>
                   <li className="flex gap-4">
                     <CheckCircle size={20} className="text-lavender flex-shrink-0 mt-1" />
-                    <p>Practicing as a Valuer (Free lancer) since March 2000.</p>
+                    <p>Following that, Practicing as a Valuer (Free lancer) since March 2000.</p>
                   </li>
                 </ul>
               </CardContent>
@@ -283,7 +283,7 @@ const About = () => {
                   </li>
                   <li className="flex gap-4">
                     <CheckCircle size={20} className="text-lavender flex-shrink-0 mt-1" />
-                    <p>He is the <strong>Chairman of the Institute Of Valuer, Coimbatore Branch</strong>.</p>
+                    <p>He is the <strong>Past Chairman of the Institute Of Valuer, Coimbatore Branch(2019-2024)</strong>.</p>
                   </li>
                   <li className="flex gap-4">
                     <CheckCircle size={20} className="text-lavender flex-shrink-0 mt-1" />
