@@ -7,7 +7,7 @@ const features = [
   {
     icon: <CheckCircle className="h-8 w-8 text-lavender" />,
     title: "Registered Valuers",
-    description: "IBBI, Income Tax, and Government Approved valuers providing credible assessments."
+    description: "IBBI, Income Tax, Wealth Tax and Government Approved valuers providing credible assessments."
   },
   {
     icon: <Users className="h-8 w-8 text-lavender" />,
