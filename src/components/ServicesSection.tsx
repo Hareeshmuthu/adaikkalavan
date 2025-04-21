@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Building, Scale, FileText, Home, BarChart } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -29,13 +28,13 @@ const services = [
     icon: <BarChart className="h-10 w-10 text-lavender" />,
     title: "Fair Market Value, Liquidation Value Reports",
     description: "Comprehensive reports assessing fair market value and liquidation value with detailed analytics."
-  }
+  },
   {
     icon: <BarChart className="h-10 w-10 text-lavender" />,
     title: "Techno-Economic Viability (TEV) & Feasibility Reports",
     description: "Assess both the technical feasibility and economic/financial viability of a project for Project appraisal,Market Potential,Financial Analysis,Legal Compliance,etc"
-  }
- {
+  },
+  {
     icon: <BarChart className="h-10 w-10 text-lavender" />,
     title: "Specialized in Discounted Cash Flow (DCF)",
     description: "Present value of future cash flows by applying a discount rate."
