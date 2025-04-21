@@ -3,7 +3,7 @@ import React from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const clients = [
-  "SBI", "IOB", "IOC", "IDBI", "TIIC", "PNB", "LICHFL", 
+  "SBI","IOC", "IDBI", "TIIC", "PNB", "LICHFL", 
   "Canara Bank", "BSNL", "Bank of India", "Karnataka Bank", 
   "Union Bank", "ESAF Bank", "REPCO HFL", "G Square"
 ];
