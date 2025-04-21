@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Phone, Mail, MapPin, Linkedin, Instagram } from 'lucide-react';
 import { Separator } from "@/components/ui/separator";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -20,9 +20,12 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-lavender transition-colors">
+                <Link 
+                  to="/about" 
+                  className="text-muted-foreground hover:text-lavender transition-colors"
+                >
                   About
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#services" className="text-muted-foreground hover:text-lavender transition-colors">
