@@ -38,6 +38,11 @@ const services = [
     icon: <FileText className="h-10 w-10 text-lavender" />,
     title: "Specialized in Discounted Cash Flow (DCF)",
     description: "Present value of future cash flows by applying a discount rate."
+  },
+  {
+    icon: <Building className="h-10 w-10 text-lavender" />,
+    title: "Valuation for Fractional Ownership",
+    description: "Proportionate share of income, usage, and capital appreciation"
   }
 ];
 

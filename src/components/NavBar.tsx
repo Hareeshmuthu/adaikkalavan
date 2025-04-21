@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Phone, Menu } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import {
   Sheet,
   SheetContent,
@@ -15,8 +14,19 @@ import {
 const NavBar = () => {
   const phoneNumber = "9361179820";
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleHomeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
+  };
+
   const navigationLinks = [
-    { href: "/", label: "Home", isRoute: true },
+    { href: "/", label: "Home", isRoute: true, onClick: handleHomeClick },
     { href: "/about", label: "About", isRoute: true },
     { href: "services", label: "Services", isRoute: false, target: "services" },
     { href: "why-choose-us", label: "Why Choose Us", isRoute: false, target: "why-choose-us" },
@@ -28,13 +38,17 @@ const NavBar = () => {
   const NavigationLink = ({ link, onNavigate }: { link: any; onNavigate?: () => void }) => {
     if (link.isRoute) {
       return (
-        <Link
-          to={link.href}
-          className="text-sm hover:text-lavender transition-colors py-2"
-          onClick={onNavigate}
+        <div
+          onClick={(e) => {
+            if (link.onClick) {
+              link.onClick(e);
+            }
+            if (onNavigate) onNavigate();
+          }}
+          className="text-sm hover:text-lavender transition-colors py-2 cursor-pointer"
         >
           {link.label}
-        </Link>
+        </div>
       );
     } else {
       const handleClick = () => {

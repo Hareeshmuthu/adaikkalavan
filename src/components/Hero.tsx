@@ -34,7 +34,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto opacity-0 animate-fadeIn animation-delay-400">
-          RERA- and IBBI-compliant valuation services by Registered Valuers under the Companies Act.
+          IBBI- standard compliant valuation services by Registered Valuers under the Companies Act.
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4 opacity-0 animate-fadeIn animation-delay-600">
