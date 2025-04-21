@@ -66,7 +66,7 @@ const handler = async (req: Request): Promise<Response> => {
     // If email was sent successfully, also send a confirmation to the requester if they provided an email
     if (requestData.email) {
       await resend.emails.send({
-        from: "Adaikkalavan Property Valuer <onboarding@resend.dev>",
+        from: "Adaikkalavan Property Valuer <adaikkalavanvaluer@gmail.com>",
         to: requestData.email,
         subject: "Your Valuation Request Has Been Received",
         html: `
@@ -74,7 +74,7 @@ const handler = async (req: Request): Promise<Response> => {
           <p>Dear ${requestData.name},</p>
           <p>We have received your valuation request and our team will review it shortly.</p>
           <p>We will contact you at ${requestData.phone} to discuss your requirements in detail.</p>
-          <p>Best regards,<br>Adaikkalavan Property Valuer</p>
+          <p>Best regards,<br>M.Adaikkalavan</p>
         `,
       });
     }
