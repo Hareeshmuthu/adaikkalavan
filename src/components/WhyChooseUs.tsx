@@ -22,7 +22,7 @@ const features = [
   {
     icon: <Clock className="h-8 w-8 text-lavender" />,
     title: "Compliance",
-    description: "Strict adherence to ICAI & Valuation Standards for all reports."
+    description: "Strict adherence to Valuation Standards for all reports."
   },
   {
     icon: <Shield className="h-8 w-8 text-lavender" />,
