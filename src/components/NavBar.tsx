@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone, Menu } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -13,7 +12,7 @@ import {
 } from "@/components/ui/sheet";
 
 const NavBar = () => {
-  const phoneNumber = "9361179820";
+  const phoneNumber = "9443292527";
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -39,7 +38,6 @@ const NavBar = () => {
     { href: "contact", label: "Contact", isRoute: false, target: "contact" },
   ];
 
-  // Helper component to handle both regular and scroll links
   const NavigationLink = ({ link, onNavigate }: { link: any; onNavigate?: () => void }) => {
     if (link.isRoute) {
       return (
@@ -57,11 +55,9 @@ const NavBar = () => {
       );
     } else {
       const handleClick = () => {
-        // If we're not on the home page, navigate to home first
         if (window.location.pathname !== '/') {
           navigate('/', { state: { scrollTo: link.target } });
         } else {
-          // If we're already on home page, just scroll
           const element = document.getElementById(link.target);
           if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
@@ -88,7 +84,6 @@ const NavBar = () => {
           M. Adaikkalavan
         </div>
         
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           {navigationLinks.map((link) => (
             <NavigationLink 
@@ -99,7 +94,6 @@ const NavBar = () => {
         </div>
         
         <div className="flex items-center gap-2">
-          {/* Phone Button */}
           <Button variant="outline" asChild>
             <a href={`tel:${phoneNumber}`} className="flex items-center gap-2">
               <Phone size={16} />
@@ -107,7 +101,6 @@ const NavBar = () => {
             </a>
           </Button>
 
-          {/* Mobile Menu */}
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>

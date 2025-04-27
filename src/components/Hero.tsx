@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { FileText, Phone } from 'lucide-react';
 
 const Hero = () => {
   const scrollToContactForm = () => {
-    const contactFormSection = document.getElementById('contact');
+    const contactFormSection = document.getElementById('contact-form');
     if (contactFormSection) {
       contactFormSection.scrollIntoView({ behavior: 'smooth' });
     }
@@ -55,7 +54,7 @@ const Hero = () => {
             className="gap-2 border-lavender hover:bg-lavender/10"
           >
             <Phone size={18} />
-            <a href="tel:9361179820">Talk to an Expert</a>
+            <a href="tel:9443292527">Talk to an Expert</a>
           </Button>
         </div>
       </div>

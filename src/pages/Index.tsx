@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
@@ -45,14 +46,14 @@ const Index = () => {
       
       <Element name="contact" id="contact">
         <MapSection />
-        <ContactForm />
+        <ContactForm id="contact-form" />
       </Element>
       
       <Footer />
       
       {/* Sticky Call-to-Action with animation */}
       <div className="fixed bottom-4 right-4 z-50 animate-bounce">
-        <a href="tel:9361179820">
+        <a href="tel:9443292527">
           <Button className="btn-gradient rounded-full h-14 w-14 p-0 hover:scale-110 transition-transform">
             <Phone size={24} />
           </Button>
