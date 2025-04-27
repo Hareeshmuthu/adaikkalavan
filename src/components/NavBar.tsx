@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/sheet";
 
 const NavBar = () => {
-  const phoneNumber = "9443292527";
+  const phoneNumber = "9443290527";
   const navigate = useNavigate();
   const location = useLocation();
 
