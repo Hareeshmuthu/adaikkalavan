@@ -4,8 +4,11 @@ import { Button } from "@/components/ui/button";
 import { FileText, Phone } from 'lucide-react';
 
 const Hero = () => {
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToContactForm = () => {
+    const contactFormSection = document.getElementById('contact');
+    if (contactFormSection) {
+      contactFormSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -39,7 +42,7 @@ const Hero = () => {
         
         <div className="flex flex-col sm:flex-row justify-center gap-4 opacity-0 animate-fadeIn animation-delay-600">
           <Button 
-            onClick={scrollToContact} 
+            onClick={scrollToContactForm} 
             size="lg" 
             className="btn-gradient gap-2"
           >
