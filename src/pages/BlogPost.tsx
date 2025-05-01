@@ -1,4 +1,3 @@
-
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -16,7 +15,6 @@ import { Button } from '@/components/ui/button';
 import { MessageSquare, BookOpen } from 'lucide-react';
 import { blogPosts } from './Blogs';
 import ImageOptimizer from '@/components/ui/image-optimizer';
-import { ThemeProvider, ThemeToggle } from '@/components/ui/theme-toggle';
 
 const BlogPost = () => {
   const { id } = useParams();
@@ -233,78 +231,71 @@ const BlogPost = () => {
   };
 
   return (
-    <ThemeProvider defaultTheme="light">
-      <div className="min-h-screen bg-background text-foreground">
-        <NavBar />
-        
-        <main className="container mx-auto pt-24 pb-16 px-4">
-          <div className="flex justify-between items-center mb-4">
-            <Link to="/blogs" className="text-primary hover:underline">← Back to Blogs</Link>
-            <ThemeToggle />
-          </div>
-          
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle className="text-3xl font-bold">{blogPost.title}</CardTitle>
-              <CardDescription className="flex justify-between items-center text-base">
-                <span>{blogPost.category} • {blogPost.date}</span>
-                <span className="flex items-center gap-2">
-                  <BookOpen size={16} className="text-lavender" />
-                  <span className="text-sm">8 min read</span>
-                </span>
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="prose prose-lg max-w-none dark:prose-invert">
-              {renderContent()}
-            </CardContent>
-            <CardFooter className="flex flex-col items-start border-t pt-6">
-              <div className="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                <div>
-                  <p className="font-semibold">Written by M. Adaikkalavan</p>
-                  <p className="text-sm text-muted-foreground">
-                    Registered Valuer under IBBI and Companies Act
-                  </p>
-                </div>
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm">
-                    <MessageSquare size={16} className="mr-2" /> Share
-                  </Button>
-                </div>
+    <div className="min-h-screen bg-background text-foreground">
+      <NavBar />
+      
+      <main className="container mx-auto pt-24 pb-16 px-4">
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle className="text-3xl font-bold">{blogPost.title}</CardTitle>
+            <CardDescription className="flex justify-between items-center text-base">
+              <span>{blogPost.category} • {blogPost.date}</span>
+              <span className="flex items-center gap-2">
+                <BookOpen size={16} className="text-lavender" />
+                <span className="text-sm">8 min read</span>
+              </span>
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="prose prose-lg max-w-none dark:prose-invert">
+            {renderContent()}
+          </CardContent>
+          <CardFooter className="flex flex-col items-start border-t pt-6">
+            <div className="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+              <div>
+                <p className="font-semibold">Written by M. Adaikkalavan</p>
+                <p className="text-sm text-muted-foreground">
+                  Registered Valuer under IBBI and Companies Act
+                </p>
               </div>
-            </CardFooter>
-          </Card>
-          
-          <section className="mt-10">
-            <h2 className="text-2xl font-bold mb-6">Related Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {blogPosts
-                .filter(post => post.id !== blogPost.id)
-                .slice(0, 3)
-                .map((post) => (
-                  <Card key={post.id} className="hover:shadow-md transition-shadow">
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-lg">{post.title}</CardTitle>
-                      <CardDescription className="text-xs">{post.date}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm line-clamp-3">{post.excerpt}</p>
-                    </CardContent>
-                    <CardFooter>
-                      <Link to={`/blogs/${post.id}`}>
-                        <Button variant="link" className="px-0">
-                          Read more →
-                        </Button>
-                      </Link>
-                    </CardFooter>
-                  </Card>
-                ))}
+              <div className="flex gap-2">
+                <Button variant="outline" size="sm">
+                  <MessageSquare size={16} className="mr-2" /> Share
+                </Button>
+              </div>
             </div>
-          </section>
-        </main>
+          </CardFooter>
+        </Card>
         
-        <Footer />
-      </div>
-    </ThemeProvider>
+        <section className="mt-10">
+          <h2 className="text-2xl font-bold mb-6">Related Articles</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {blogPosts
+              .filter(post => post.id !== blogPost.id)
+              .slice(0, 3)
+              .map((post) => (
+                <Card key={post.id} className="hover:shadow-md transition-shadow">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-lg">{post.title}</CardTitle>
+                    <CardDescription className="text-xs">{post.date}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm line-clamp-3">{post.excerpt}</p>
+                  </CardContent>
+                  <CardFooter>
+                    <Link to={`/blogs/${post.id}`}>
+                      <Button variant="link" className="px-0">
+                        Read more →
+                      </Button>
+                    </Link>
+                  </CardFooter>
+                </Card>
+              ))}
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
   );
 };
 
