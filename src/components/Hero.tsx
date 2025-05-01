@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { FileText, Phone } from 'lucide-react';
@@ -18,8 +17,8 @@ const backgroundImages = [
     alt: "Residential building"
   },
   {
-    url: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80",
-    alt: "Surveyor at work"
+    url: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&q=80",
+    alt: "Industrial building"
   },
   {
     url: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80",
