@@ -2,7 +2,7 @@
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, Link } from 'react-router-dom';
 import { 
   Card, 
   CardContent, 
@@ -246,9 +246,11 @@ const BlogPost = () => {
                     <p className="text-sm line-clamp-3">{post.excerpt}</p>
                   </CardContent>
                   <CardFooter>
-                    <Button variant="link" className="px-0" href={`/blogs/${post.id}`}>
-                      Read more →
-                    </Button>
+                    <Link to={`/blogs/${post.id}`}>
+                      <Button variant="link" className="px-0">
+                        Read more →
+                      </Button>
+                    </Link>
                   </CardFooter>
                 </Card>
               ))}
