@@ -3,8 +3,9 @@ import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { BookOpen } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-interface BlogPost {
+export interface BlogPost {
   id: number;
   title: string;
   excerpt: string;
@@ -12,13 +13,13 @@ interface BlogPost {
   category: string;
 }
 
-const blogPosts: BlogPost[] = [
+export const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "Latest Trends in Property Valuation",
-    excerpt: "Discover how modern technologies are reshaping the landscape of property valuation in today's market.",
+    title: "Market Approach for Real Property Interest Valuation",
+    excerpt: "A deep dive into the market approach for valuing real estate, examining comparables, adjustment factors, and the delicate balance between objective and subjective assessments.",
     date: "April 15, 2025",
-    category: "Market Trends"
+    category: "Valuation Methods"
   },
   {
     id: 2,
@@ -70,7 +71,9 @@ const Blogs = () => {
                   <p className="text-muted-foreground mb-4">{post.excerpt}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-muted-foreground">{post.date}</span>
-                    <button className="text-sm text-primary hover:underline">Read More →</button>
+                    <Link to={`/blogs/${post.id}`} className="text-sm text-primary hover:underline">
+                      Read More →
+                    </Link>
                   </div>
                 </div>
               </div>
