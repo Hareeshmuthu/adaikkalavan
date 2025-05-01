@@ -40,19 +40,25 @@ const Blogs = () => {
             {blogPosts.map((post) => (
               <div key={post.id} className="border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all">
                 <div className="bg-muted p-4">
-                  <div className="h-40 flex items-center justify-center bg-primary/10 rounded-md mb-4">
-                    <BookOpen size={48} className="text-primary opacity-70" />
-                  </div>
-                  <span className="inline-block px-3 py-1 text-xs rounded-full bg-primary/10 text-primary mb-2">
-                    {post.category}
-                  </span>
-                  <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-                  <p className="text-muted-foreground mb-4">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">{post.date}</span>
-                    <Link to={`/blogs/${post.id}`} className="text-sm text-primary hover:underline">
-                      Read More →
-                    </Link>
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <img 
+                      src="/lovable-uploads/cb787287-db1a-4333-9af1-11e3ae2060a1.png" 
+                      alt="Property valuation concept" 
+                      className="md:w-1/3 rounded-md object-cover h-auto"
+                    />
+                    <div className="md:w-2/3">
+                      <span className="inline-block px-3 py-1 text-xs rounded-full bg-primary/10 text-primary mb-2">
+                        {post.category}
+                      </span>
+                      <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
+                      <p className="text-muted-foreground mb-4">{post.excerpt}</p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-muted-foreground">{post.date}</span>
+                        <Link to={`/blogs/${post.id}`} className="text-sm text-primary hover:underline">
+                          Read More →
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
