@@ -1,9 +1,47 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
+    /* Light mode variables (default) */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 45 100% 50%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 5% 10%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 5% 40%;
+
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 5% 10%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 88%;
+    --input: 240 5% 88%;
+    --ring: 240 5% 40%;
+
+    --radius: 0.5rem;
+    
+    --lavender: 267 83% 60%;
+    --lavender-light: 267 83% 75%;
+  }
+
+  .dark {
+    /* Dark mode variables */
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
 
@@ -31,11 +69,6 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
-
-    --radius: 0.5rem;
-    
-    --lavender: 267 83% 60%;
-    --lavender-light: 267 83% 75%;
   }
 }
 
@@ -50,6 +83,7 @@
 }
 
 @layer utilities {
+  /* ... keep existing code (utility classes) */
   .glass-card {
     @apply bg-secondary/60 backdrop-blur-sm border border-white/10 shadow-xl;
   }

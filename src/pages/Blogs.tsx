@@ -4,6 +4,7 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
 import ImageOptimizer from '@/components/ui/image-optimizer';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 export interface BlogPost {
   id: number;
@@ -29,8 +30,11 @@ const Blogs = () => {
       <NavBar />
       
       <main className="container mx-auto pt-24 pb-16 px-4">
-        <section className="mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6">Our Blog</h1>
+        <section className="mb-8">
+          <div className="flex justify-between items-center mb-6">
+            <h1 className="text-3xl md:text-4xl font-bold">Our Blog</h1>
+            <ThemeToggle />
+          </div>
           <p className="text-lg text-muted-foreground mb-8">
             Insights and updates from M. Adaikkalavan on property valuation, market trends, 
             and more to help you stay informed.
