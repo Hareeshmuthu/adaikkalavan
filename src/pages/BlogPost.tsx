@@ -29,6 +29,14 @@ const BlogPost = () => {
     if (blogPost.id === 1) {
       return (
         <>
+          <div className="mb-8 flex justify-center">
+            <img 
+              src="/lovable-uploads/45e7ad9a-efb5-4e95-ac87-3385b37de81e.png" 
+              alt="M. Adaikkalavan Property Valuer - Comparable Evidence" 
+              className="rounded-lg max-h-[400px] w-auto shadow-lg"
+            />
+          </div>
+          
           <h2 className="text-2xl font-semibold mb-4">Unlocking Property Value: A Deep Dive into the Market Approach</h2>
           
           <p className="mb-4">
@@ -45,6 +53,14 @@ const BlogPost = () => {
             <li><strong>Transferability</strong>: The ease with which an asset can be transferred or sold from one party to another. Properties that are easy to trade or convert into cash tend to have greater value.</li>
             <li><strong>Demand</strong>: The level of desire or need for an asset. High demand generally increases a property's value, while low demand decreases it.</li>
           </ul>
+          
+          <div className="my-8 flex justify-center">
+            <img 
+              src="/lovable-uploads/8d88295e-8099-4c73-a6a7-2daf38d6d7bb.png" 
+              alt="M. Adaikkalavan Property Valuer - Market Approach" 
+              className="rounded-lg max-h-[400px] w-auto shadow-lg"
+            />
+          </div>
           
           <h3 className="text-xl font-semibold mt-6 mb-3">What is Real Estate?</h3>
           <p className="mb-4">
@@ -79,6 +95,14 @@ const BlogPost = () => {
             <li>The result of underlying demand, indicating an active market.</li>
           </ul>
           
+          <div className="my-8 flex justify-center">
+            <img 
+              src="/lovable-uploads/dfce7b09-d3cb-4593-949f-acfd170d8fc0.png" 
+              alt="Objective vs Subjective in property valuation" 
+              className="rounded-lg max-h-[400px] w-auto shadow-lg"
+            />
+          </div>
+          
           <p className="mb-4">
             Direct transactional evidence from open market sales near the valuation date is normally the best and most reliable source. However, obtaining full details of real estate transactions can be challenging as they are rarely fully public. Publicly available information, such as data from government sources or real estate agents' websites, can be useful but often requires further investigation and analysis to confirm all relevant details that impacted the sale price.
           </p>
@@ -109,6 +133,14 @@ const BlogPost = () => {
             <li>Real estate markets are not fully transparent.</li>
           </ul>
           
+          <div className="my-8 flex justify-center">
+            <img 
+              src="/lovable-uploads/45adf415-c5cb-4c1f-8fbf-12c3eede3018.png" 
+              alt="Verification and handling of historical data" 
+              className="rounded-lg max-h-[400px] w-auto shadow-lg"
+            />
+          </div>
+          
           <h3 className="text-xl font-semibold mt-6 mb-3">Market Approach vs. Other Valuation Methods</h3>
           <p className="mb-4">
             The Market Approach is just one tool in the valuer's toolkit. Other common methods include:
@@ -122,6 +154,15 @@ const BlogPost = () => {
           <p className="mb-4">
             A crucial part of the Market Approach is making accurate adjustments to the sale prices of comparable properties. These adjustments account for the differences between the comparable property and the subject property.
           </p>
+          
+          <div className="my-8 flex justify-center">
+            <img 
+              src="/lovable-uploads/6932a2de-daa7-42a1-b55b-02ecb89f99e0.png" 
+              alt="Adjustment Factors in property valuation" 
+              className="rounded-lg max-h-[400px] w-auto shadow-lg"
+            />
+          </div>
+          
           <p className="mb-4">
             <strong>Why are adjustments crucial?</strong> They are essential for fine-tuning the estimated value. Without proper adjustments, the final valuation could be significantly inaccurate.
           </p>
