@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { FileText, Phone } from 'lucide-react';
 import { 
@@ -10,27 +10,59 @@ import {
 
 const backgroundImages = [
   {
-    url: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80",
+    url: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=1500",
     alt: "Office building"
   },
   {
-    url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80",
+    url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1500",
     alt: "Residential building"
   },
   {
-    url: "https://images.unsplash.com/photo-1517022812141-23620dba5c23?auto=format&fit=crop&q=80&w=2340",
+    url: "https://images.unsplash.com/photo-1517022812141-23620dba5c23?auto=format&fit=crop&q=80&w=1500",
     alt: "Agricultural land with green field"
   },
   {
-    url: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80",
+    url: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1500",
     alt: "Law and justice scales"
   }
 ];
 
+// Preload images function
+const preloadImages = (images) => {
+  return images.map((imageObj) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = imageObj.url;
+      img.onload = () => resolve(imageObj);
+      img.onerror = () => reject(new Error(`Failed to load image: ${imageObj.url}`));
+    });
+  });
+};
+
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const imagesRef = useRef(backgroundImages.map(() => React.createRef()));
+
+  // Preload images on component mount
+  useEffect(() => {
+    const loadImages = async () => {
+      try {
+        await Promise.all(preloadImages(backgroundImages));
+        setImagesLoaded(true);
+      } catch (error) {
+        console.error("Error preloading images:", error);
+        // Fall back to showing content even if image preload fails
+        setImagesLoaded(true);
+      }
+    };
+
+    loadImages();
+  }, []);
 
   useEffect(() => {
+    if (!imagesLoaded) return;
+    
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => 
         (prevIndex + 1) % backgroundImages.length
@@ -38,7 +70,7 @@ const Hero = () => {
     }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [imagesLoaded]);
 
   const scrollToContactForm = () => {
     const contactFormSection = document.getElementById('contact-form');
@@ -54,15 +86,21 @@ const Hero = () => {
         {backgroundImages.map((image, index) => (
           <div 
             key={index}
+            ref={imagesRef.current[index]}
             className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
             style={{ 
               backgroundImage: `url('${image.url}')`,
-              opacity: currentImageIndex === index ? 1 : 0,
+              opacity: currentImageIndex === index && imagesLoaded ? 1 : 0,
               filter: "brightness(0.2)"
             }}
             aria-hidden="true"
           />
         ))}
+        
+        {/* Fallback background color while images are loading */}
+        {!imagesLoaded && (
+          <div className="absolute inset-0 bg-black" aria-hidden="true" />
+        )}
       </div>
       
       <div className="relative z-10 container mx-auto px-4 text-center">

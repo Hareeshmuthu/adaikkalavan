@@ -1,4 +1,3 @@
-
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -15,6 +14,7 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from '@/components/ui/button';
 import { MessageSquare, BookOpen } from 'lucide-react';
 import { blogPosts } from './Blogs';
+import ImageOptimizer from '@/components/ui/image-optimizer';
 
 const BlogPost = () => {
   const { id } = useParams();
@@ -63,9 +63,9 @@ const BlogPost = () => {
           </p>
           
           <div className="my-6 md:float-right md:ml-6 md:w-2/5">
-            <img 
-              src="/lovable-uploads/45e7ad9a-efb5-4e95-ac87-3385b37de81e.png" 
-              alt="M. Adaikkalavan Property Valuer - Comparable Evidence" 
+            <ImageOptimizer
+              src="/lovable-uploads/45e7ad9a-efb5-4e95-ac87-3385b37de81e.png"
+              alt="M. Adaikkalavan Property Valuer - Comparable Evidence"
               className="rounded-lg shadow-lg w-full"
             />
           </div>
@@ -90,7 +90,8 @@ const BlogPost = () => {
           <p className="mb-4 clear-right">
             Direct transactional evidence from open market sales near the valuation date is normally the best and most reliable source. However, obtaining full details of real estate transactions can be challenging as they are rarely fully public. Publicly available information, such as data from government sources or real estate agents' websites, can be useful but often requires further investigation and analysis to confirm all relevant details that impacted the sale price.
           </p>
-          <p className="mb-4">
+          
+          <p className="mb-4 clear-right">
             It is absolutely <strong>essential that comparable evidence is carefully examined for accuracy</strong>. Important details like building quality, lease terms, or incentives can significantly impact the reported figure and should be verified.
           </p>
           
@@ -118,9 +119,9 @@ const BlogPost = () => {
           </ul>
           
           <div className="my-6 md:float-left md:mr-6 md:w-2/5">
-            <img 
-              src="/lovable-uploads/8d88295e-8099-4c73-a6a7-2daf38d6d7bb.png" 
-              alt="M. Adaikkalavan Property Valuer - Market Approach" 
+            <ImageOptimizer
+              src="/lovable-uploads/8d88295e-8099-4c73-a6a7-2daf38d6d7bb.png"
+              alt="M. Adaikkalavan Property Valuer - Market Approach"
               className="rounded-lg shadow-lg w-full"
             />
           </div>
@@ -135,9 +136,9 @@ const BlogPost = () => {
           </ul>
           
           <div className="my-6 md:float-right md:ml-6 md:w-2/5">
-            <img 
-              src="/lovable-uploads/6932a2de-daa7-42a1-b55b-02ecb89f99e0.png" 
-              alt="Adjustment Factors in property valuation" 
+            <ImageOptimizer
+              src="/lovable-uploads/6932a2de-daa7-42a1-b55b-02ecb89f99e0.png"
+              alt="Adjustment Factors in property valuation"
               className="rounded-lg shadow-lg w-full"
             />
           </div>
@@ -155,9 +156,9 @@ const BlogPost = () => {
           </p>
           
           <div className="my-6 md:float-left md:mr-6 md:w-2/5">
-            <img 
-              src="/lovable-uploads/dfce7b09-d3cb-4593-949f-acfd170d8fc0.png" 
-              alt="Objective vs Subjective in property valuation" 
+            <ImageOptimizer
+              src="/lovable-uploads/dfce7b09-d3cb-4593-949f-acfd170d8fc0.png"
+              alt="Objective vs Subjective in property valuation"
               className="rounded-lg shadow-lg w-full"
             />
           </div>

@@ -2,8 +2,8 @@
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
-import { BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ImageOptimizer from '@/components/ui/image-optimizer';
 
 export interface BlogPost {
   id: number;
@@ -41,11 +41,14 @@ const Blogs = () => {
               <div key={post.id} className="border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all">
                 <div className="bg-muted p-4">
                   <div className="flex flex-col md:flex-row gap-6">
-                    <img 
-                      src="/lovable-uploads/cb787287-db1a-4333-9af1-11e3ae2060a1.png" 
-                      alt="Property valuation concept" 
-                      className="md:w-1/3 rounded-md object-cover h-auto"
-                    />
+                    <div className="md:w-1/3 rounded-md overflow-hidden h-auto">
+                      <ImageOptimizer
+                        src="/lovable-uploads/cb787287-db1a-4333-9af1-11e3ae2060a1.png"
+                        alt="Property valuation concept"
+                        className="w-full h-full aspect-[4/3]"
+                        priority={true}
+                      />
+                    </div>
                     <div className="md:w-2/3">
                       <span className="inline-block px-3 py-1 text-xs rounded-full bg-primary/10 text-primary mb-2">
                         {post.category}

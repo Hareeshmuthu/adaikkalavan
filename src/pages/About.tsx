@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { CheckCircle, Award, Book, Briefcase, Medal, School, Star, User } from 'lucide-react';
+import ImageOptimizer from '@/components/ui/image-optimizer';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
@@ -27,14 +28,19 @@ const About = () => {
           
           {/* Professional Image Section */}
           <div className="flex justify-center mb-8">
-            <motion.img 
-              src="/lovable-uploads/1dc2530e-a3f6-41ce-9b8a-d016f26be1e5.png" 
-              alt="M. Adaikkalavan speaking at 51st Indian Valuers Congress"
-              className="w-full max-w-2xl rounded-xl shadow-lg"
+            <motion.div 
+              className="w-full max-w-2xl rounded-xl shadow-lg overflow-hidden"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-            />
+            >
+              <ImageOptimizer
+                src="/lovable-uploads/1dc2530e-a3f6-41ce-9b8a-d016f26be1e5.png"
+                alt="M. Adaikkalavan speaking at 51st Indian Valuers Congress"
+                priority={true}
+                className="w-full h-auto aspect-[16/9]"
+              />
+            </motion.div>
           </div>
           
           <p className="text-lg md:text-xl max-w-3xl mx-auto">
