@@ -20,27 +20,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: "A deep dive into the market approach for valuing real estate, examining comparables, adjustment factors, and the delicate balance between objective and subjective assessments.",
     date: "April 15, 2025",
     category: "Valuation Methods"
-  },
-  {
-    id: 2,
-    title: "Understanding Land Value Assessment",
-    excerpt: "An in-depth look at the factors that influence land valuation and how to interpret assessment reports.",
-    date: "March 28, 2025",
-    category: "Valuation Insights"
-  },
-  {
-    id: 3,
-    title: "The Impact of Infrastructure on Property Values",
-    excerpt: "How new infrastructure developments can significantly affect property valuations in surrounding areas.",
-    date: "February 10, 2025",
-    category: "Market Analysis"
-  },
-  {
-    id: 4,
-    title: "Commercial Property Valuation: Key Considerations",
-    excerpt: "Essential factors to consider when assessing the value of commercial properties in today's economic climate.",
-    date: "January 22, 2025",
-    category: "Commercial Real Estate"
   }
 ];
 
@@ -57,7 +36,7 @@ const Blogs = () => {
             and more to help you stay informed.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
             {blogPosts.map((post) => (
               <div key={post.id} className="border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all">
                 <div className="bg-muted p-4">
