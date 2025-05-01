@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { FileText, Phone } from 'lucide-react';
@@ -42,7 +41,10 @@ const preloadImages = (images) => {
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
-  const imagesRef = useRef(backgroundImages.map(() => React.createRef()));
+  // Fix: Properly type the refs as HTMLDivElement
+  const imagesRef = useRef<(React.RefObject<HTMLDivElement>)[]>(
+    backgroundImages.map(() => React.createRef<HTMLDivElement>())
+  );
 
   // Preload images on component mount
   useEffect(() => {
