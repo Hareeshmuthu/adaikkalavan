@@ -1,3 +1,4 @@
+
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -161,6 +162,8 @@ const BlogPost = () => {
             />
           </div>
           
+          <div className="clear-both"></div>
+          
           <h4 className="text-lg font-semibold mt-4 mb-2">Objective Adjustments</h4>
           <p className="mb-4">
             These are based on quantifiable and measurable factors that are relatively consistent and supported by verifiable data. They are less prone to personal interpretation.
@@ -173,7 +176,7 @@ const BlogPost = () => {
             <li><strong>Lot Size</strong>: Objectively measurable, adjusted using value per square foot of land.</li>
           </ul>
           
-          <h4 className="text-lg font-semibold mt-4 mb-2 clear-left">Subjective Adjustments</h4>
+          <h4 className="text-lg font-semibold mt-4 mb-2">Subjective Adjustments</h4>
           <p className="mb-4">
             These adjustments involve more personal judgment, interpretation, and experience. Subjective factors are harder to quantify precisely and can vary depending on market perception, buyer preferences, trends, or local dynamics.
           </p>
