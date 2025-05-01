@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { FileText, Phone } from 'lucide-react';
@@ -18,7 +17,7 @@ const backgroundImages = [
     alt: "Residential building"
   },
   {
-    url: "https://images.unsplash.com/photo-1590510656756-c7d8a9b10dd9?auto=format&fit=crop&q=80",
+    url: "https://images.unsplash.com/photo-1590510656756-c7d8a9b10dd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
     alt: "Real estate market trends and graphs"
   },
   {
