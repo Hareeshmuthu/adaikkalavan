@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Phone, Menu } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -29,9 +30,14 @@ const NavBar = () => {
     navigate('/about');
   };
 
+  const handleBlogsClick = (e: React.MouseEvent) => {
+    navigate('/blogs');
+  };
+
   const navigationLinks = [
     { href: "/", label: "Home", isRoute: true, onClick: handleHomeClick },
     { href: "/about", label: "About", isRoute: true, onClick: handleAboutClick },
+    { href: "/blogs", label: "Blogs", isRoute: true, onClick: handleBlogsClick },
     { href: "services", label: "Services", isRoute: false, target: "services" },
     { href: "why-choose-us", label: "Why Choose Us", isRoute: false, target: "why-choose-us" },
     { href: "clients", label: "Clients", isRoute: false, target: "clients" },
