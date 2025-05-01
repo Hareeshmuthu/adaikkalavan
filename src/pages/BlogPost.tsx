@@ -1,4 +1,3 @@
-
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -29,14 +28,6 @@ const BlogPost = () => {
     if (blogPost.id === 1) {
       return (
         <>
-          <div className="mb-8 flex justify-center">
-            <img 
-              src="/lovable-uploads/45e7ad9a-efb5-4e95-ac87-3385b37de81e.png" 
-              alt="M. Adaikkalavan Property Valuer - Comparable Evidence" 
-              className="rounded-lg max-h-[400px] w-auto shadow-lg"
-            />
-          </div>
-          
           <h2 className="text-2xl font-semibold mb-4">Unlocking Property Value: A Deep Dive into the Market Approach</h2>
           
           <p className="mb-4">
@@ -54,14 +45,6 @@ const BlogPost = () => {
             <li><strong>Demand</strong>: The level of desire or need for an asset. High demand generally increases a property's value, while low demand decreases it.</li>
           </ul>
           
-          <div className="my-8 flex justify-center">
-            <img 
-              src="/lovable-uploads/8d88295e-8099-4c73-a6a7-2daf38d6d7bb.png" 
-              alt="M. Adaikkalavan Property Valuer - Market Approach" 
-              className="rounded-lg max-h-[400px] w-auto shadow-lg"
-            />
-          </div>
-          
           <h3 className="text-xl font-semibold mt-6 mb-3">What is Real Estate?</h3>
           <p className="mb-4">
             Before diving deeper into the Market Approach, it's helpful to define what we mean by real estate. <strong>Real estate refers to property consisting of land and the buildings or structures on it</strong>. This encompasses several property types, including residential homes, commercial buildings, industrial properties, and undeveloped land. It's important to note that <strong>cultivated land, also known as agricultural real estate or farmland, is considered part of real estate</strong> and includes the land itself plus supporting structures like barns and irrigation systems.
@@ -77,6 +60,14 @@ const BlogPost = () => {
           <p className="mb-4">
             Essentially, it involves comparing the property being valued (the subject property) with other similar properties that have recently sold. The sale prices of these comparable properties are then adjusted to account for differences between them and the subject property.
           </p>
+          
+          <div className="my-6 md:float-right md:ml-6 md:w-2/5">
+            <img 
+              src="/lovable-uploads/45e7ad9a-efb5-4e95-ac87-3385b37de81e.png" 
+              alt="M. Adaikkalavan Property Valuer - Comparable Evidence" 
+              className="rounded-lg shadow-lg w-full"
+            />
+          </div>
           
           <h3 className="text-xl font-semibold mt-6 mb-3">The Power of Comparables</h3>
           <p className="mb-4">
@@ -95,15 +86,7 @@ const BlogPost = () => {
             <li>The result of underlying demand, indicating an active market.</li>
           </ul>
           
-          <div className="my-8 flex justify-center">
-            <img 
-              src="/lovable-uploads/dfce7b09-d3cb-4593-949f-acfd170d8fc0.png" 
-              alt="Objective vs Subjective in property valuation" 
-              className="rounded-lg max-h-[400px] w-auto shadow-lg"
-            />
-          </div>
-          
-          <p className="mb-4">
+          <p className="mb-4 clear-right">
             Direct transactional evidence from open market sales near the valuation date is normally the best and most reliable source. However, obtaining full details of real estate transactions can be challenging as they are rarely fully public. Publicly available information, such as data from government sources or real estate agents' websites, can be useful but often requires further investigation and analysis to confirm all relevant details that impacted the sale price.
           </p>
           <p className="mb-4">
@@ -133,11 +116,11 @@ const BlogPost = () => {
             <li>Real estate markets are not fully transparent.</li>
           </ul>
           
-          <div className="my-8 flex justify-center">
+          <div className="my-6 md:float-left md:mr-6 md:w-2/5">
             <img 
-              src="/lovable-uploads/45adf415-c5cb-4c1f-8fbf-12c3eede3018.png" 
-              alt="Verification and handling of historical data" 
-              className="rounded-lg max-h-[400px] w-auto shadow-lg"
+              src="/lovable-uploads/8d88295e-8099-4c73-a6a7-2daf38d6d7bb.png" 
+              alt="M. Adaikkalavan Property Valuer - Market Approach" 
+              className="rounded-lg shadow-lg w-full"
             />
           </div>
           
@@ -150,18 +133,18 @@ const BlogPost = () => {
             <li><strong>Cost Approach</strong>: Estimates value by calculating the cost to build a similar property from scratch today, plus land value, minus depreciation. This approach is often used for unique or specialized properties where comparable sales data is scarce. It is based on construction costs and land value, whereas the Market Approach uses market sales data. The Cost Approach also explicitly considers depreciation, which is not directly factored in the Market Approach.</li>
           </ul>
           
-          <h3 className="text-xl font-semibold mt-6 mb-3">The Art of Adjustment Factors</h3>
-          <p className="mb-4">
-            A crucial part of the Market Approach is making accurate adjustments to the sale prices of comparable properties. These adjustments account for the differences between the comparable property and the subject property.
-          </p>
-          
-          <div className="my-8 flex justify-center">
+          <div className="my-6 md:float-right md:ml-6 md:w-2/5">
             <img 
               src="/lovable-uploads/6932a2de-daa7-42a1-b55b-02ecb89f99e0.png" 
               alt="Adjustment Factors in property valuation" 
-              className="rounded-lg max-h-[400px] w-auto shadow-lg"
+              className="rounded-lg shadow-lg w-full"
             />
           </div>
+          
+          <h3 className="text-xl font-semibold mt-6 mb-3 clear-left">The Art of Adjustment Factors</h3>
+          <p className="mb-4">
+            A crucial part of the Market Approach is making accurate adjustments to the sale prices of comparable properties. These adjustments account for the differences between the comparable property and the subject property.
+          </p>
           
           <p className="mb-4">
             <strong>Why are adjustments crucial?</strong> They are essential for fine-tuning the estimated value. Without proper adjustments, the final valuation could be significantly inaccurate.
@@ -169,6 +152,14 @@ const BlogPost = () => {
           <p className="mb-4">
             Adjustment factors can be broadly categorized as Objective or Subjective:
           </p>
+          
+          <div className="my-6 md:float-left md:mr-6 md:w-2/5">
+            <img 
+              src="/lovable-uploads/dfce7b09-d3cb-4593-949f-acfd170d8fc0.png" 
+              alt="Objective vs Subjective in property valuation" 
+              className="rounded-lg shadow-lg w-full"
+            />
+          </div>
           
           <h4 className="text-lg font-semibold mt-4 mb-2">Objective Adjustments</h4>
           <p className="mb-4">
@@ -182,7 +173,7 @@ const BlogPost = () => {
             <li><strong>Lot Size</strong>: Objectively measurable, adjusted using value per square foot of land.</li>
           </ul>
           
-          <h4 className="text-lg font-semibold mt-4 mb-2">Subjective Adjustments</h4>
+          <h4 className="text-lg font-semibold mt-4 mb-2 clear-left">Subjective Adjustments</h4>
           <p className="mb-4">
             These adjustments involve more personal judgment, interpretation, and experience. Subjective factors are harder to quantify precisely and can vary depending on market perception, buyer preferences, trends, or local dynamics.
           </p>
@@ -195,7 +186,7 @@ const BlogPost = () => {
             <li><strong>Amenities</strong>: While an amenity like a pool adds objective value, the <em>amount</em> of adjustment can be subjective, depending on factors like climate and local market preferences.</li>
           </ul>
           
-          <h3 className="text-xl font-semibold mt-6 mb-3">Balancing Objective and Subjective</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3 clear-right">Balancing Objective and Subjective</h3>
           <p className="mb-4">
             In practice, <strong>a mix of both objective and subjective adjustments is necessary for an accurate valuation</strong>. The valuer must start with objective factors and then incorporate subjective judgments based on their experience and market knowledge, ensuring these subjective adjustments are reasonable and aligned with market trends.
           </p>
