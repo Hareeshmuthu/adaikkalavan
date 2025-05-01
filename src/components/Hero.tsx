@@ -1,8 +1,45 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { FileText, Phone } from 'lucide-react';
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem
+} from "@/components/ui/carousel";
+
+const backgroundImages = [
+  {
+    url: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80",
+    alt: "Office building"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80",
+    alt: "Residential building"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80",
+    alt: "Surveyor at work"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80",
+    alt: "Law and justice scales"
+  }
+];
 
 const Hero = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % backgroundImages.length
+      );
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToContactForm = () => {
     const contactFormSection = document.getElementById('contact-form');
     if (contactFormSection) {
@@ -11,15 +48,22 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-16">
-      {/* Background image with overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center z-0" 
-        style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80')",
-          filter: "brightness(0.2)"
-        }}
-      />
+    <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+      {/* Carousel background with overlay */}
+      <div className="absolute inset-0 z-0">
+        {backgroundImages.map((image, index) => (
+          <div 
+            key={index}
+            className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
+            style={{ 
+              backgroundImage: `url('${image.url}')`,
+              opacity: currentImageIndex === index ? 1 : 0,
+              filter: "brightness(0.2)"
+            }}
+            aria-hidden="true"
+          />
+        ))}
+      </div>
       
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="mb-6 opacity-0 animate-fadeIn">
@@ -64,6 +108,18 @@ const Hero = () => {
         <div className="w-8 h-12 rounded-full border-2 border-lavender flex items-start justify-center">
           <div className="w-1 h-3 bg-lavender rounded-full mt-2 animate-slideUp"></div>
         </div>
+      </div>
+      
+      {/* Background image indicators */}
+      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 flex gap-2">
+        {backgroundImages.map((_, index) => (
+          <button 
+            key={index}
+            className={`w-2 h-2 rounded-full ${currentImageIndex === index ? 'bg-lavender' : 'bg-gray-500'}`}
+            onClick={() => setCurrentImageIndex(index)}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   );
