@@ -71,16 +71,16 @@ const Hero = () => {
             M.Adaikkalavan M.E.(struc),M.Sc.,(REV),A.M.I.E,F.I.V,F.I.I.T.Arb.
           </h4>
           <h6 className="text-muted-foreground">
-            Property Valuation Expert | 25+ Years Experience
+            Property Valuation Expert | IBBI Registered Valuer | 25+ Years Experience
           </h6>
         </div>
         
         <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6 max-w-4xl mx-auto opacity-0 animate-fadeIn animation-delay-200">
-          <span className="text-gradient">Trusted Property Valuations</span> for Bank Loans, Under Companies Act, Insolvency, Legal Compliance
+          <span className="text-gradient">Trusted Property Valuations</span> for Bank Loans, Companies Act, Insolvency, Legal Court Compliance
         </h1>
         
         <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto opacity-0 animate-fadeIn animation-delay-400">
-          IBBI- standard compliant valuation services by Registered Valuers under the Companies Act.
+          Leading <span className="font-semibold">Property Valuation</span> services by <span className="font-semibold">IBBI Registered Valuer</span> for <span className="font-semibold">Bank Loans, Income Tax, Wealth Tax, Legal Court</span> and <span className="font-semibold">Companies Act</span> compliance across India.
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4 opacity-0 animate-fadeIn animation-delay-600">
@@ -100,6 +100,14 @@ const Hero = () => {
             <Phone size={18} />
             <a href="tel:9443292527">Talk to an Expert</a>
           </Button>
+        </div>
+        
+        <div className="mt-10 text-sm text-muted-foreground opacity-0 animate-fadeIn animation-delay-800">
+          <p className="max-w-3xl mx-auto leading-relaxed">
+            Specialized in Real Estate Valuation, Asset Valuation, Insolvency Valuation, 
+            Legal Court Land and Building Valuation by qualified Real Estate Appraiser and 
+            Government Approved Valuer.
+          </p>
         </div>
       </div>
       
