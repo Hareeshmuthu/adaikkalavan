@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -46,6 +47,44 @@ const About = () => {
           <p className="text-lg md:text-xl max-w-3xl mx-auto">
             <span className="font-semibold">M. Adaikkalavan, born on 26th June 1970, is a highly accomplished professional with over 30 years of extensive experience in the field of Civil Engineering and Valuation</span>.
           </p>
+        </motion.div>
+
+        {/* Professional Overview Section */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeInUp}
+          className="mb-16"
+        >
+          <Card className="glass-card overflow-hidden">
+            <CardContent className="p-8">
+              <div className="flex items-center mb-8">
+                <Star size={24} className="text-lavender mr-3" />
+                <h2 className="text-2xl font-semibold">Professional Overview</h2>
+              </div>
+              <div className="prose prose-lg max-w-none text-foreground">
+                <p className="mb-6">
+                  <strong>M. Adaikkalavan IBBI Registered Valuers</strong> and government-approved professionals delivering trusted property and asset valuation services across India. Our core expertise spans <strong>property valuation for bank loans, insolvency and IBC valuation, Companies Act, 2013 compliance</strong>, and <strong>merger & acquisition support</strong>.
+                </p>
+                <p className="mb-6">
+                  We are <strong>bank empaneled valuers for major institutions including SBI, IOC, IDBI, PNB, Canara Bank, Union Bank</strong> etc., providing accurate <strong>collateral valuation reports, home loan property assessments</strong>, and <strong>commercial real estate valuations</strong>.
+                </p>
+                <p className="mb-6">
+                  Recognized by courts, and regulatory bodies we specialize in <strong>fair market value, liquidation value, going concern, and DCF valuation methods</strong>, offering <strong>fast-track, same-day, and emergency valuation services</strong> for time-sensitive transactions.
+                </p>
+                <p className="mb-6">
+                  With strong regional presence—<strong>property valuers in Coimbatore, Chennai, Tirupur, Nilgiris, Erode, Pollachi</strong>, and various other parts in <strong>Tamil Nadu</strong>. We handle <strong>industrial, agricultural, residential, commercial, and institutional property assessments</strong>.
+                </p>
+                <p className="mb-6">
+                  Whether you're a corporate client seeking <strong>portfolio valuation</strong>, an <strong>insolvency professional</strong>, or an individual applying for a <strong>home loan</strong>, we provide legally compliant, audit-ready reports using globally accepted valuation approaches.
+                </p>
+                <p className="font-medium text-lavender">
+                  Our mission is to support India's financial, legal, and corporate ecosystem with transparent, defensible, and prompt valuation services tailored to your needs—be it for <strong>loans, litigation, IBBI reporting, or regulatory compliance under FEMA, IBC, and the Income Tax Act</strong>.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
