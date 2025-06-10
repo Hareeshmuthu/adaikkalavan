@@ -1,4 +1,5 @@
 
+
 import React, { useEffect, useRef } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -74,7 +75,7 @@ const About = () => {
                   Recognized by courts, and regulatory bodies we specialize in <strong>fair market value, liquidation value, going concern, and DCF valuation methods</strong>, offering <strong>fast-track, same-day, and emergency valuation services</strong> for time-sensitive transactions.
                 </p>
                 <p className="mb-6">
-                  With strong regional presence—<strong>property valuers in Coimbatore, Chennai, Tirupur, Nilgiris, Erode, Pollachi</strong>, and various other parts in <strong>Tamil Nadu</strong>. We handle <strong>industrial, agricultural, residential, commercial, and institutional property assessments</strong>.
+                  We are placed in <strong>Coimbatore</strong> and also extend our arms for property valuation in <strong>Chennai, Tirupur, Nilgiris, Erode, Pollachi</strong>, and various other parts in <strong>Tamil Nadu</strong>. We handle <strong>industrial, agricultural, residential, commercial, and institutional property assessments</strong>.
                 </p>
                 <p className="mb-6">
                   Whether you're a corporate client seeking <strong>portfolio valuation</strong>, an <strong>insolvency professional</strong>, or an individual applying for a <strong>home loan</strong>, we provide legally compliant, audit-ready reports using globally accepted valuation approaches.
@@ -361,3 +362,4 @@ const About = () => {
 };
 
 export default About;
+
